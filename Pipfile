@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+vcrpy = "*"
+coverage = "*"
+flake8 = "*"
+pep8 = "*"
+isort = "*"
+yapf = "*"
+mypy = "*"
+pylint = "*"
+jupyter = "*"
+ipython = "*"
+jupyterlab = "*"
+pytest-vcr = "*"
+pytest-xdist = "*"
+pydebug = "*"
+pudb = "*"
+pytest-pudb = "*"
+
+[packages]
+slackclient = "*"
+check-mk-web-api = "*"
+
+[requires]
+python_version = "3.6"

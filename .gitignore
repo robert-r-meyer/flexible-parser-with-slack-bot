@@ -1,0 +1,16 @@
+# Basic Git
+.git
+
+# Jupyter Labs
+.ipynb_checkpoints
+*.ipynb
+
+# Ctags Tags
+tags
+
+# Testing caches
+.mypy_cache
+.pytest_cache
+.envrc
+
+*/__pycache__/
