@@ -39,9 +39,9 @@ class CheckMkClient():
         except Exception as inst:
             return inst
 
-    def set_downtime(self, host_name, downTime=120):
+    def set_downtime(self, host_name, message, downTime=120):
         try:
-            blob = self._api.set_downtime()
+            blob = self._api.set_downtime(host_name, message, downTime)
             return FormatFor.slack_json_as_code_blob(blob)
         except Exception as inst:
             return inst

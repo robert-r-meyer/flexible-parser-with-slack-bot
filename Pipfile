@@ -4,27 +4,25 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "*"
-vcrpy = "*"
 coverage = "*"
 flake8 = "*"
-pep8 = "*"
-isort = "*"
-yapf = "*"
-mypy = "*"
-pylint = "*"
-jupyter = "*"
 ipython = "*"
+isort = "*"
+jupyter = "*"
 jupyterlab = "*"
-pytest-vcr = "*"
-pytest-xdist = "*"
-pydebug = "*"
+mypy = "*"
+pep8 = "*"
 pudb = "*"
+pydebug = "*"
+pytest = "*"
 pytest-pudb = "*"
+pytest-vcr = "*"
+vcrpy = "*"
+yapf = "*"
 
 [packages]
 slackclient = "*"
-check-mk-web-api = "*"
+check-mk-web-api = {path = "/mnt/c/Users/robert.meyer/Documents/GitHub/check-mk-web-api",editable = true}
 
 [requires]
 python_version = "3.6"

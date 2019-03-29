@@ -63,15 +63,17 @@ class Command:
             # the method takes
 
             method_signature = len(signature(exec_command).parameters)
+            string_parsed_commands = (' ').join(pass_through_commands).split('\"')
 
             # if the method has the same number of arguments as the number of
             # additional arguments passed to the command, execute the
             # command with those arguments
 
-            if method_signature == len(pass_through_commands):
-                print('pass through match command sig')
+            if method_signature == len(string_parsed_commands):
+                logging.debug('pass through match command sig')
+                logging.debug((' ').join(string_parsed_commands))
 
-                return exec_command(*pass_through_commands)
+                return exec_command(*string_parsed_commands)
 
         # Otherwise, this isn't a subparser,
         # and we didn't find a command with the correct number of arguments
@@ -79,6 +81,8 @@ class Command:
 
         return ' '.join([
             "Sorry I don't understand the command: %s." % primary_command,
+            "with the args of:",
+            (' ').join(string_parsed_commands),
             self._help()
         ])
 

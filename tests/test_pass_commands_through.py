@@ -16,7 +16,7 @@ class TestCommandPassing():
         assert self.parser.handle_command('ping') == 'End of Line.'
 
     def test_command_block(self):
-        assert [*self.parser._commands], ['cmk', 'ping', 'help']
+        assert [*self.parser._commands] == ['ping', 'help', 'cmk']
 
     def test_pass_through(self):
         response = self.parser.handle_command('cmk ping')

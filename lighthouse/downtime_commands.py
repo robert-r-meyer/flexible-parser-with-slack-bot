@@ -17,9 +17,8 @@ class DowntimeCommands(CheckMkBaseCommand):
         return ' '.join(
             ['TODO:', 'get downtime CheckMk', host_name])
 
-    def set_downtime(self, host_name, downTime=120):
-        return ' '.join(
-            ['TODO:', 'set Downtime for CheckMk host', host_name, downTime])
+    def set_downtime(self, host_name, message, downTime=120):
+        return self._api.set_downtime(host_name, message, downTime)
 
     def get_all_downtimes(self):
         return self._api.get_all_downtimes()

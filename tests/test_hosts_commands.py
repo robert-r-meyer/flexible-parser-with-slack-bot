@@ -14,7 +14,7 @@ class TestCommandPassing():
             'ping') == "This is a journey into Check Mk's host API commands."
 
     def test_command_block(self):
-        assert [*self.parser._commands], ['edit', 'add', 'help', 'ping']
+        assert [*self.parser._commands] == ['ping', 'help', 'add', 'edit']
 
     # @pytest.mark.vcr()
     def test_add_host_with_folder(self):
