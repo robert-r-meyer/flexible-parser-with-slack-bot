@@ -3,10 +3,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -25,10 +25,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -47,10 +47,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -69,10 +69,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -91,10 +91,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -113,10 +113,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -135,10 +135,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -157,10 +157,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -179,10 +179,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -201,10 +201,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -223,10 +223,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -245,10 +245,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -267,10 +267,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -289,10 +289,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -311,10 +311,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -333,10 +333,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -355,10 +355,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -377,10 +377,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -399,10 +399,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -421,10 +421,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -443,10 +443,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -465,10 +465,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -487,10 +487,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -509,10 +509,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -531,10 +531,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -553,10 +553,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -575,10 +575,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -597,10 +597,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -619,10 +619,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -641,10 +641,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -663,10 +663,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -685,10 +685,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -707,10 +707,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -729,10 +729,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -751,10 +751,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -773,10 +773,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -795,10 +795,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -817,10 +817,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -839,10 +839,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -861,10 +861,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -883,10 +883,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -905,10 +905,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -927,10 +927,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -949,10 +949,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -971,10 +971,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -993,10 +993,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1015,10 +1015,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1037,10 +1037,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1059,10 +1059,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1081,10 +1081,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1103,10 +1103,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1125,10 +1125,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1147,10 +1147,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1169,10 +1169,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1191,10 +1191,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\
@@ -1213,10 +1213,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
+    uri: http://testing.host/master_dev/check_mk/view.py?view_name=downtimes&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c&output_format=json
   response:
     body: {string: "[\n [\n  \"host\", \n  \"service_description\", \n  \"downtime_origin\"\
         , \n  \"downtime_author\", \n  \"downtime_entry_time\", \n  \"downtime_start_time\"\

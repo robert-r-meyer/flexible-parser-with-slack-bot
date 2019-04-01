@@ -29,7 +29,7 @@ is suggested for development.
 
 
 Lighthouse also uses CheckMk variables:
-    CHECK_MK_SERVER=http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py
+    CHECK_MK_SERVER=http://testing.host/master_dev/check_mk/webapi.py
     CHECK_MK_USER=automation
     CHECK_MK_PASSWORD=<magicpassowrd>
 

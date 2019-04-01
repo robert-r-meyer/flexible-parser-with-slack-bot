@@ -3,10 +3,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -24,10 +24,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -45,10 +45,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -66,10 +66,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -87,10 +87,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -108,10 +108,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -129,10 +129,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -150,10 +150,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -171,10 +171,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -192,10 +192,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -213,10 +213,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -234,10 +234,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -255,10 +255,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -276,10 +276,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -297,10 +297,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -318,10 +318,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -339,10 +339,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -360,10 +360,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -381,10 +381,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -402,10 +402,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -423,10 +423,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -444,10 +444,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -465,10 +465,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -486,10 +486,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -507,10 +507,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -528,10 +528,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -549,10 +549,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -570,10 +570,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -591,10 +591,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -612,10 +612,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -633,10 +633,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -654,10 +654,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -675,10 +675,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -696,10 +696,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -717,10 +717,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -738,10 +738,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -759,10 +759,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -780,10 +780,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -801,10 +801,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -822,10 +822,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -843,10 +843,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",
@@ -864,10 +864,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?effective_attributes=0&action=get_all_hosts&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": {"gewrjd1dv": {"attributes": {}, "hostname": "gewrjd1dv",
         "path": "tests"}, "gewrpp1dv": {"attributes": {}, "hostname": "gewrpp1dv",

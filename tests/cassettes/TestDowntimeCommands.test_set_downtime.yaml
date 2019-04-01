@@ -3,10 +3,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?_do_confirm=yes&_transid=-1&_do_actions=yes&service=+120&host=sewrndb26.mgmt.taketwo.online+&actions=yes&viewname=service&_down_minutes=120&_down_comment=down+me%21&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?_do_confirm=yes&_transid=-1&_do_actions=yes&service=+120&host=sewrndb26.mgmt.taketwo.online+&actions=yes&viewname=service&_down_minutes=120&_down_comment=down+me%21&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": "Check_MK exception: Unknown API action ", "result_code":
         1}'}
@@ -23,10 +23,10 @@ interactions:
     body: null
     headers:
       Connection: [close]
-      Host: [gewrnoccmk1test.taketwo.online]
+      Host: [testing.host]
       User-Agent: [Python-urllib/3.6]
     method: GET
-    uri: http://gewrnoccmk1test.taketwo.online/master_dev/check_mk/webapi.py?_do_confirm=yes&_transid=-1&_do_actions=yes&service=+120&host=sewrndb26.mgmt.taketwo.online+&actions=yes&viewname=service&_down_minutes=120&_down_comment=down+me%21&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
+    uri: http://testing.host/master_dev/check_mk/webapi.py?_do_confirm=yes&_transid=-1&_do_actions=yes&service=+120&host=sewrndb26.mgmt.taketwo.online+&actions=yes&viewname=service&_down_minutes=120&_down_comment=down+me%21&output_format=json&_username=automation&_secret=abd0c8c3-134e-4620-b7ef-5bd040bc8e0c
   response:
     body: {string: '{"result": "Check_MK exception: Unknown API action ", "result_code":
         1}'}
