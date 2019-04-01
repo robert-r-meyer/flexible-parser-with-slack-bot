@@ -19,10 +19,15 @@ pytest-pudb = "*"
 pytest-vcr = "*"
 vcrpy = "*"
 yapf = "*"
+pytest-random-order = "*"
+pytest-picked = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+pytest-sugar = "*"
 
 [packages]
 slackclient = "*"
-check-mk-web-api = {path = "/mnt/c/Users/robert.meyer/Documents/GitHub/check-mk-web-api",editable = true}
+check-mk-web-api = {path = "/home/rmeyer/dev/2k/check-mk-web-api"}
 
 [requires]
 python_version = "3.6"

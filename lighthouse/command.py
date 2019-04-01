@@ -28,6 +28,7 @@ class Command:
         # Stash rest of arguments for future use
         pass_through_commands = command.split(' ')
         primary_command = pass_through_commands.pop(0)
+        string_parsed_commands = (' ').join(pass_through_commands).split('\"')
 
         logging.debug('Primary Command %s' % primary_command)
         logging.debug('Pass through commands %s' % pass_through_commands)
@@ -63,7 +64,6 @@ class Command:
             # the method takes
 
             method_signature = len(signature(exec_command).parameters)
-            string_parsed_commands = (' ').join(pass_through_commands).split('\"')
 
             # if the method has the same number of arguments as the number of
             # additional arguments passed to the command, execute the
@@ -80,11 +80,16 @@ class Command:
         # so we will show the help text and return out of the command handler
 
         return ' '.join([
-            "Sorry I don't understand the command: %s." % primary_command,
-            "with the args of:",
-            (' ').join(string_parsed_commands),
+            "Sorry I don't understand the command: `%s`." % primary_command,
+            self.__help_text_args(string_parsed_commands),
             self._help()
         ])
+
+    def __help_text_args(self, args):
+        if not ' '.join(args).strip():
+            return "No arguments were passed."
+
+        return (' ').join(["with the args of: ", "`", *args, "`"])
 
     def _ping(self):
         return self._check

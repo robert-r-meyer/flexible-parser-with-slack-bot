@@ -1,8 +1,9 @@
-import pytest
 import json
 
-from lighthouse.master_control_program import MasterControlProgram
+import pytest
+
 from lighthouse.format import FormatFor
+from lighthouse.master_control_program import MasterControlProgram
 
 
 class TestCommandPassing():
@@ -30,12 +31,20 @@ class TestCommandPassing():
         block = self.parser.handle_command('cmk nope')
 
         completed_block = '\r\n'.join([
-            "Sorry I don't understand the command: nope. " +
-            "Currently Check Mk supports the following commands:", "ping",
-            "help", "get", "host", "downtime",
-            ])
+            "Sorry I don't understand the command: `nope`. " +
+            "No arguments were passed. " +
+            "Currently Check Mk supports the following commands:",
+            "ping",
+            "help",
+            "get",
+            "host",
+            "downtime",
+        ])
 
         assert block == completed_block
+
+        # assert set(block.split(' ')) - set(completed_block.split(' ')) == set(
+        # [])
 
     def test_pass_through_ping(self):
         """
@@ -60,12 +69,13 @@ class TestCommandPassing():
                 "attributes": {},
                 "hostname": "gewrjd1dv",
                 "path": "tests"
-                },
+            },
             "gewrpp1dv": {
                 "attributes": {},
                 "hostname": "gewrpp1dv",
                 "path": "tests"
-                }}
+            }
+        }
 
         formated_block = FormatFor.slack_json_as_code_blob(expected)
         assert block == formated_block
@@ -80,4 +90,3 @@ class TestCommandPassing():
         block = self.parser.handle_command('cmk get host my-host')
 
         assert block == 'Check_MK exception: No such host'
-

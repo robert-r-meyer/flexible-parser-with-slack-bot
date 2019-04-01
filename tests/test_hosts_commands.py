@@ -1,3 +1,5 @@
+import pytest
+
 from lighthouse.host_commands import HostCommands
 
 
@@ -16,7 +18,7 @@ class TestCommandPassing():
     def test_command_block(self):
         assert [*self.parser._commands] == ['ping', 'help', 'add', 'edit']
 
-    # @pytest.mark.vcr()
+    @pytest.mark.skip('Implementation Pending')
     def test_add_host_with_folder(self):
         """
         TODO: Add VCR when adding actual calls to checkmk
@@ -27,7 +29,7 @@ class TestCommandPassing():
         block = self.parser.handle_command('add my-host folder-name')
         assert block == 'TODO: Add Host name from CheckMk my-host folder-name'
 
-    # @pytest.mark.vcr()
+    @pytest.mark.skip('Pending Implementation')
     def test_edit_host_with_ipaddress(self):
         """
         TODO: Add VCR when adding actual calls to checkmk

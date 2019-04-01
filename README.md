@@ -81,11 +81,38 @@ This will prevent VCR from recording new responses as well as calling to the ser
 closed loop testing. During development the use of `pytest --vcr-record=once`. Use of this will an error to be raised for new 
 requests if there is a cassette file while recording new interactions if there is now cassette file.
 
+
+In order to get the most out of your `pytests` we have implemented the use of
+- pytest-cov
+- pytest-picked
+- pytest-random-order
+- pytest-sugar
+- pytest-xdist
+
+Most of these do not need configuration:
+
+Full use of local running of tests is done by `pytest --vcr-record=none -n 4 --random-order`
+
+`--random-order` ensures that tests run in a random order to uncover any issues with order dependent tests.
+
+`-n 4` allows tests to run in parallel using the number of cores your CPU has. In this case, 4.
+
+`--vcr-record=none` prevents external calls
+
+
+#### Coverage report
+
+Pytest-cov provides coverage reports for testing. In order to use this feature, append the 
+`--cov=lighthouse` to the end of your pytest commands.
+
+`pytest --vcr-record=none -n 4 --random-order --cov=lighthouse`
+
+
 ### CI Tests
 
 CI setup will require the correct environment variables to be specified. Check the Environment Variables section.
 
-The full command to run is `py.test --vcr-record=none`
+The full command to run is `pytest --vcr-record=none --random-order`
 
 This will prevent VCR from recording new cassettes. This also ensures that all tests are run on local cassettes preventing unexpected results in
 API calls and returns. Use of this method also allows for removal of tokens and other sensitive data from configuration files.
