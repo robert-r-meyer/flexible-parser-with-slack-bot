@@ -1,6 +1,7 @@
 import json
 
 import pytest
+from pytest_mock import mocker
 
 from lighthouse.format import FormatFor
 from lighthouse.master_control_program import MasterControlProgram
@@ -43,9 +44,6 @@ class TestCommandPassing():
 
         assert block == completed_block
 
-        # assert set(block.split(' ')) - set(completed_block.split(' ')) == set(
-        # [])
-
     def test_pass_through_ping(self):
         """
         Pass Check MK command subcommands to CheckMkCommand processor
@@ -55,14 +53,12 @@ class TestCommandPassing():
 
         assert block == 'This is a journey into Check Mk.'
 
-    @pytest.mark.vcr()
-    def test_pass_through_get_all(self):
+    def test_pass_through_get_all(self, mocker):
         """
         Pass Check MK command subcommands to CheckMkCommand processor
         `get all` should be passed to checkmk and return the get all hosts
         from GetCommands processor
         """
-        block = self.parser.handle_command('cmk get all')
 
         expected = {
             "gewrjd1dv": {
@@ -77,16 +73,29 @@ class TestCommandPassing():
             }
         }
 
-        formated_block = FormatFor.slack_json_as_code_blob(expected)
-        assert block == formated_block
+        get_all_hosts = mocker.patch(
+            'check_mk_web_api.web_api.WebApi.get_all_hosts',
+            return_value=expected)
 
-    @pytest.mark.vcr()
-    def test_pass_through_get_host(self):
+        block = self.parser.handle_command('cmk get all')
+        formatted_block = FormatFor.slack_json_as_code_blob(expected)
+        assert block == formatted_block
+
+        # Assert parser calls to get all hosts on web api package
+        get_all_hosts.assert_called_once()
+
+    def test_pass_through_get_host(self, mocker):
         """
         Pass Check MK command subcommands to CheckMkCommand processor
         `get all` should be passed to checkmk and return the get all hosts
         from GetCommands processor
         """
-        block = self.parser.handle_command('cmk get host my-host')
+        expected = {'expected': True}
 
-        assert block == 'Check_MK exception: No such host'
+        get_host = mocker.patch(
+            'check_mk_web_api.web_api.WebApi.get_host', return_value=expected)
+
+        block = self.parser.handle_command('cmk get host my-host')
+        formatted_block = FormatFor.slack_json_as_code_blob(expected)
+        assert block == formatted_block
+        get_host.assert_called_once_with(('my-host', ))

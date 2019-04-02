@@ -5,7 +5,8 @@ from lighthouse.host_commands import HostCommands
 
 class TestCommandPassing():
     def setup(self):
-        self.parser = HostCommands()
+        self.api = 'NOT THE ACTUAL API INTERFACE'
+        self.parser = HostCommands(self.api)
 
     def test_ping(self):
         assert self.parser._ping(

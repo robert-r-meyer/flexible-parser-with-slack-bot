@@ -1,24 +1,35 @@
-from lighthouse.check_mk_base_command import CheckMkBaseCommand
+from lighthouse.command import Command
 
 
-class DowntimeCommands(CheckMkBaseCommand):
-    def __init__(self):
+class DowntimeCommands(Command):
+    def __init__(self, api):
         super().__init__()
+
         self._check = 'This is a journey into Check Mk\'s downtime API commands.'
         self._command_name = 'Check Mk downtime API'
-        # # Add additional command functions and parsers here
+        self._api = api
+
+        # Add additional command functions and parsers here
         self._commands.update({
             'for': self.get_downtime,
             'set': self.set_downtime,
             'all': self.get_all_downtimes,
+            'comments': self.get_comments,
+            'alerts': self.get_alerts,
         })
 
     def get_downtime(self, host_name):
-        return ' '.join(
-            ['TODO:', 'get downtime CheckMk', host_name])
+        return ' '.join(['TODO:', 'get downtime CheckMk', host_name])
 
     def set_downtime(self, host_name, message, downTime=120):
-        return self._api.set_downtime(host_name, message, downTime)
+        return self.safe_call_as_json(self._api.set_downtime, host_name,
+                                      message, downTime)
 
     def get_all_downtimes(self):
-        return self._api.get_all_downtimes()
+        return self.safe_call_as_json(self._api.get_all_downtimes)
+
+    def get_alerts(self):
+        return self.safe_call_as_json(self._api.get_alerts)
+
+    def get_comments(self):
+        return self.safe_call_as_json(self._api.get_comments)

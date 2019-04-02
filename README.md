@@ -1,4 +1,4 @@
-# Lighthouse, the Check MK slack agent
+2jj# Lighthouse, the Check MK slack agent
 
 ## Deployment
 TODO: ADD

@@ -19,3 +19,6 @@ pytest.ini
 # Coverage Files
 .coverage
 
+
+# Floobits
+.floo*

@@ -1,6 +1,8 @@
 import logging
 from inspect import signature
 
+from lighthouse.format import FormatFor
+
 # import pudb
 """
 Top level module using command in order to
@@ -103,3 +105,11 @@ class Command:
                     self._command_name)
 
         return "\r\n".join([response] + [*self._commands])
+
+    def safe_call_as_json(self, function, *args):
+        try:
+            blob = function(args)
+
+            return FormatFor.slack_json_as_code_blob(blob)
+        except Exception as inst:
+            return inst

@@ -1,12 +1,14 @@
 import pytest
 
+import mocker
 from lighthouse.downtime_commands import DowntimeCommands
 from lighthouse.format import FormatFor
 
 
 class TestDowntimeCommands():
     def setup(self):
-        self.parser = DowntimeCommands()
+        self.api = 'NOT THE ACTUAL API INTERFACE'
+        self.parser = DowntimeCommands(self.api)
 
     def test_ping(self):
         assert self.parser._ping(
@@ -17,7 +19,7 @@ class TestDowntimeCommands():
             'ping'
         ) == "This is a journey into Check Mk's downtime API commands."
 
-    @pytest.mark.vcr()
+    @pytest.mark.skip('Mock to prevent exit from local')
     def test_return_of_all_downtime(self):
         """
         `downtime all`
@@ -45,4 +47,14 @@ class TestDowntimeCommands():
 
     @pytest.mark.skip(reason='Not Implemented yet get_downtime')
     def test_get_downtime(self):
-        assert True
+        assert False
+
+    def test_get_historical_downtimes(self):
+        assert False
+
+    def test_get_comments(self):
+        with mock.patch(
+                'lighthouse.check_mk_client.CheckMkClient.get_comments'):
+            block = self.parser.handle_command('')
+
+            assert False

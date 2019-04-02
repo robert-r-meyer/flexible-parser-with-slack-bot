@@ -3,7 +3,8 @@ from lighthouse.get_commands import GetCommands
 
 class TestGetCommands():
     def setup(self):
-        self.parser = GetCommands()
+        self.api = 'NOT THE ACTUAL API INTERFACE'
+        self.parser = GetCommands(self.api)
 
     def test_ping(self):
         assert self.parser._ping(

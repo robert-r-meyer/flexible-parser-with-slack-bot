@@ -1,11 +1,13 @@
-from lighthouse.check_mk_base_command import CheckMkBaseCommand
+from lighthouse.command import Command
 
 
-class HostCommands(CheckMkBaseCommand):
-    def __init__(self):
+class HostCommands(Command):
+    def __init__(self, api):
         super().__init__()
         self._check = 'This is a journey into Check Mk\'s host API commands.'
         self._command_name = 'Check Mk host API'
+        self._api = api
+
         # # Add additional command functions and parsers here
         self._commands.update({
             'add': self.add_host,

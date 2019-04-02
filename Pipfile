@@ -24,6 +24,7 @@ pytest-picked = "*"
 pytest-cov = "*"
 pytest-xdist = "*"
 pytest-sugar = "*"
+pytest-mock = "*"
 
 [packages]
 slackclient = "*"
