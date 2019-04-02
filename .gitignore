@@ -11,6 +11,11 @@ tags
 # Testing caches
 .mypy_cache
 .pytest_cache
+pytest.ini
 .envrc
 
 */__pycache__/
+
+# Coverage Files
+.coverage
+
