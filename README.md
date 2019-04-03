@@ -1,4 +1,5 @@
-2jj# Lighthouse, the Check MK slack agent
+# Lighthouse, the Check MK slack agent
+[![CircleCI](https://circleci.com/gh/robert-r-meyer/flexible-parser-with-slack-bot.svg?style=svg)](https://circleci.com/gh/robert-r-meyer/flexible-parser-with-slack-bot)
 
 ## Deployment
 TODO: ADD
