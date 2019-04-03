@@ -1,0 +1,44 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:3.6.1
+
+    working_directory: ~/repo
+    environment:
+      PIPENV_IN_PROJECT: true
+      PIPENV_VENV_IN_PROJECT: true
+      CHECK_MK_URL: http://localhost/checkmd2/
+      CHECK_MK_USER: automation
+      CHECK_MK_SECRET: not_a_secret
+      SLACK_CLIENT_NAME: not_a_client
+      SLACK_CLIENT_TOKEN: not_a_token
+
+    steps:
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+
+      - restore_cache:  # ensure this step occurs *before* installing dependencies
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install --dev
+      - run:
+          command: |
+            pipenv run pytest --vcr-record=none --random-order --cov=lighthouse
+
+      - save_cache:
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
