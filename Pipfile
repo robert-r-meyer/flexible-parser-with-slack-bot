@@ -28,7 +28,7 @@ pytest-mock = "*"
 
 [packages]
 slackclient = "*"
-check-mk-web-api = {path = "/home/rmeyer/dev/2k/check-mk-web-api"}
+requests = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git",editable = true}
 
 [requires]
 python_version = "3.6"

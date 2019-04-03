@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d02c32993a60b712464c66937c31b392a4174f83b578cf68957eab65091c5064"
+            "sha256": "2e0721174454dc10a930d20ca82fc7afaa1f71e4f0db007fab2a1abb2b16eccf"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,9 +30,6 @@
             ],
             "version": "==3.0.4"
         },
-        "check-mk-web-api": {
-            "path": "/home/rmeyer/dev/2k/check-mk-web-api"
-        },
         "idna": {
             "hashes": [
                 "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
@@ -41,11 +38,9 @@
             "version": "==2.8"
         },
         "requests": {
-            "hashes": [
-                "sha256:502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e",
-                "sha256:7bf2a778576d825600030a110f3c0e3e8edc51dfaafe1c146e39a2027784957b"
-            ],
-            "version": "==2.21.0"
+            "editable": true,
+            "git": "https://github.com/robert-r-meyer/check-mk-web-api.git",
+            "ref": "e6a4916d0694ed3a3052a2b77d5f5837c263c65c"
         },
         "six": {
             "hashes": [
