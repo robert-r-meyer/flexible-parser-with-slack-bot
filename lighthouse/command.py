@@ -32,60 +32,75 @@ class Command:
         primary_command = pass_through_commands.pop(0)
         string_parsed_commands = (' ').join(pass_through_commands).split('\"')
 
-        logging.debug('Primary Command %s' % primary_command)
-        logging.debug('Pass through commands %s' % pass_through_commands)
+        logging.debug('Primary Command %s', primary_command)
+        logging.debug('Pass through commands %s', pass_through_commands)
 
         # Check if the command asked for is in the list of commands we know
 
-        if primary_command in self._commands:
-            exec_command = self._commands[primary_command]
+        if primary_command not in self._commands:
+            return self.__commandsNotFound(primary_command,
+                                           string_parsed_commands)
 
-            # if there are no additional arguments passed,
-            # execute the command and return the result
+        # Set executed commands
+        exec_command = self._commands[primary_command]
 
-            if not pass_through_commands:
-                print('No pass through, execute directly')
+        # if there are no additional arguments passed,
+        # execute the command and return the result
 
-                if callable(exec_command):
-                    return exec_command()
-                else:
-                    pass_through_commands = ['help']
+        if not pass_through_commands:
+            print('No pass through, execute directly')
 
-            # Verify that the exec_command here is a method.
-            # if it is a method, check for arg length to match
+            if callable(exec_command):
+                return exec_command()
 
-            if hasattr(exec_command, 'handle_command'):
-                # this is a secondary command parser in its own right.
-                # In this case, call the handle command method and start all
-                # this again on its own parser.
+            pass_through_commands = ['help']
 
-                return self._commands[primary_command].handle_command(
-                    ' '.join(pass_through_commands))
+        # Verify that the exec_command here is a method.
+        # if it is a method, check for arg length to match
 
-            # Inspect the method and determine the number of arguments
-            # the method takes
+        if hasattr(exec_command, 'handle_command'):
+            # this is a secondary command parser in its own right.
+            # In this case, call the handle command method and start all
+            # this again on its own parser.
 
-            method_signature = len(signature(exec_command).parameters)
+            return self._commands[primary_command].handle_command(
+                ' '.join(pass_through_commands))
 
-            # if the method has the same number of arguments as the number of
-            # additional arguments passed to the command, execute the
-            # command with those arguments
+        # Inspect the method and determine the number of arguments
+        # the method takes
 
-            if method_signature == len(string_parsed_commands):
-                logging.debug('pass through match command sig')
-                logging.debug((' ').join(string_parsed_commands))
+        method_signature = len(signature(exec_command).parameters)
 
-                return exec_command(*string_parsed_commands)
+        # if the method has the same number of arguments as the number of
+        # additional arguments passed to the command, execute the
+        # command with those arguments
 
-        # Otherwise, this isn't a subparser,
+        if method_signature == len(string_parsed_commands):
+            logging.debug('string parsed params match command sig')
+            logging.debug((' ').join(string_parsed_commands))
+
+            return exec_command(*string_parsed_commands)
+
+        if method_signature == len(pass_through_commands):
+            logging.debug('pass through match command sig')
+            logging.debug((' ').join(pass_through_commands))
+
+            return exec_command(*pass_through_commands)
+
+    def __commandsNotFound(self, primary_command, string_parsed_commands):
+        # This isn't a subparser,
         # and we didn't find a command with the correct number of arguments
         # so we will show the help text and return out of the command handler
 
-        return ' '.join([
+        results = ' '.join([
             "Sorry I don't understand the command: `%s`." % primary_command,
             self.__help_text_args(string_parsed_commands),
             self._help()
         ])
+
+        logging.debug(results)
+
+        return results
 
     def __help_text_args(self, args):
         if not ' '.join(args).strip():

@@ -15,8 +15,8 @@ class HostCommands(Command):
         })
 
     def add_host(self, host_name, folder_name):
-        return ' '.join(
-            ['TODO:', 'Add Host name from CheckMk', host_name, folder_name])
+        return self.safe_call_as_json(self._api.add_host, host_name,
+                                      folder_name)
 
     def edit_host(self, host_name, ipaddress):
         return ' '.join(

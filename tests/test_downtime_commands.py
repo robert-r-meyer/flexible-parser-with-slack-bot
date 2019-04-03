@@ -1,6 +1,6 @@
 import pytest
+from pytest_mock import mocker
 
-import mocker
 from lighthouse.downtime_commands import DowntimeCommands
 from lighthouse.format import FormatFor
 
@@ -43,18 +43,19 @@ class TestDowntimeCommands():
 
         should be passed to checkmk and set downtime on the server
         """
-        assert True == block
+        assert False
 
     @pytest.mark.skip(reason='Not Implemented yet get_downtime')
     def test_get_downtime(self):
         assert False
 
+    @pytest.mark.skip(reason='Not Implemented yet get_downtime')
     def test_get_historical_downtimes(self):
         assert False
 
-    def test_get_comments(self):
-        with mock.patch(
-                'lighthouse.check_mk_client.CheckMkClient.get_comments'):
+    @pytest.mark.skip(reason='Not Implemented yet get_downtime')
+    def test_get_comments(self, mocker):
+        with mocker.patch(
+                'lighthouse.downtime_commands.DowntimeCommands.get_comments'):
             block = self.parser.handle_command('')
-
-            assert False
+            assert block == False
