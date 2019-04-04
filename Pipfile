@@ -16,7 +16,6 @@ pudb = "*"
 pydebug = "*"
 pytest = "*"
 pytest-pudb = "*"
-pytest-vcr = "*"
 vcrpy = "*"
 yapf = "*"
 pytest-random-order = "*"
@@ -28,7 +27,7 @@ pytest-mock = "*"
 
 [packages]
 slackclient = "*"
-check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git",editable = true}
+check-mk-web-api = {editable = true,git = "https://github.com/robert-r-meyer/check-mk-web-api.git",ref = "master"}
 
 [requires]
 python_version = "3.6"
