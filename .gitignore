@@ -22,3 +22,5 @@ pytest.ini
 
 # Floobits
 .floo*
+
+config.yml

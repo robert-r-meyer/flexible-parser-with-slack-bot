@@ -2,6 +2,7 @@ import os
 
 from check_mk_web_api.web_api import WebApi
 
+from configs.config_loader import ConfigLoader
 from lighthouse.command import Command
 from lighthouse.downtime_commands import DowntimeCommands
 from lighthouse.get_commands import GetCommands
@@ -12,10 +13,12 @@ class CheckMkCommand(Command):
     def __init__(self):
         super().__init__()
 
+        variables = ConfigLoader('../config.yml')
+
         self._api = WebApi(
-            os.getenv('CHECK_MK_SERVER', 'ERROR'),
-            username=os.getenv('CHECK_MK_USER', 'ERROR'),
-            secret=os.getenv('CHECK_MK_PASSWORD', 'ERROR'))
+            variables.config['CHECK_MK_SERVER'],
+            username=variables.config['CHECK_MK_USER'],
+            secret=variables.config['CHECK_MK_PASSWORD'])
 
         self._check = 'This is a journey into Check Mk.'
         self._command_name = 'Check Mk'

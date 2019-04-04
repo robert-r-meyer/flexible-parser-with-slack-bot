@@ -4,6 +4,7 @@ import time
 
 from slackclient import SlackClient
 
+from configs.config_loader import ConfigLoader
 from lighthouse.event import Event
 
 
@@ -17,9 +18,10 @@ class Bot:
     """
 
     def __init__(self):
-        self.slack_client = SlackClient(
-            os.getenv('SLACK_CLIENT_TOKEN', 'ERROR'))
-        self.bot_name = os.getenv('SLACK_CLIENT_NAME', 'lighthouse')
+        variables = ConfigLoader('../config.yml')
+
+        self.slack_client = SlackClient(variables.config['SLACK_CLIENT_TOKEN'])
+        self.bot_name = variables.config['SLACK_CLIENT_NAME']
         self.bot_id = self._get_bot_id()
         self.valid = self.valid_slack_bot()
 
