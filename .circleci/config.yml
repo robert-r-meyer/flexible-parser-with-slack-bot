@@ -34,7 +34,7 @@ jobs:
             pipenv install --dev
       - run:
           command: |
-            pipenv run pytest --vcr-record=none --random-order --cov=lighthouse
+            pipenv run pytest tests --random-order --cov=lighthouse
 
       - save_cache:
           key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
