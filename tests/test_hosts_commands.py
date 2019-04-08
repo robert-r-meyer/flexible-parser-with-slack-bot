@@ -23,21 +23,16 @@ class TestHostsCommands():
     def test_command_block(self):
         assert [*self.parser._commands] == ['ping', 'help', 'add', 'edit']
 
-    @pytest.mark.skip()
     def test_add_host_with_folder(self, mocker):
         """
         `host add my-host folder-name`
         should be passed to checkmk and return successfully
         """
 
-        folder_host = mocker.patch(
-            'lighthouse.host_commands.HostCommands.add_host',
-            return_value=True,
-            autospec=True)
-
         self.parser.handle_command('add my-host folder-name')
-
-        assert folder_host.call_count == 1
+        self.api.add_host.assert_called_with(
+            ('my-host', 'folder-name', None, None, None), )
+        # self.api.add_host.assert_called_with(['my-host', 'folder-name'])
 
     @pytest.mark.skip()
     def test_edit_host_with_ipaddress(self):

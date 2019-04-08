@@ -14,10 +14,17 @@ class HostCommands(Command):
             'edit': self.edit_host,
         })
 
-    def add_host(self, host_name, folder_name):
-        return self.safe_call_as_json(self._api.add_host, host_name,
-                                      folder_name)
+    def add_host(self,
+                 hostname,
+                 folder='/',
+                 ipaddress=None,
+                 alias=None,
+                 tags=None,
+                 **custom_attrs):
 
-    def edit_host(self, host_name, ipaddress):
-        return ' '.join(
-            ['TODO:', 'Edit Host name from CheckMk', host_name, ipaddress])
+        return self.safe_call_as_json(self._api.add_host, hostname, folder,
+                                      ipaddress, alias, tags, **custom_attrs)
+
+    def edit_host(self, host_name, unset_attributes, **custom):
+        return self.safe_call_as_json(
+            self._api.edit_host(host_name, unset_attributes, **custom))

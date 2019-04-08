@@ -1,5 +1,5 @@
 import logging
-from inspect import signature
+from inspect import getfullargspec, signature
 
 from lighthouse.format import FormatFor
 
@@ -62,7 +62,10 @@ class Command:
         # Inspect the method and determine the number of arguments
         # the method takes
 
+        calling_signature = len(parsed_arguments)
         method_signature = len(signature(exec_command).parameters)
+        required_signature = self.__get_number_of_required_arguments(
+            exec_command)
 
         # if there are no additional arguments passed,
         # execute the command and return the result
@@ -73,8 +76,18 @@ class Command:
             if callable(exec_command):
                 return exec_command()
 
-        if method_signature == len(parsed_arguments):
-            # if the method has the same number of arguments as the number of
+        if method_signature == calling_signature:
+            # additional arguments passed to the command, execute the
+            # command with those arguments
+            logging.debug('cleaned commands match command sig %s',
+                          parsed_arguments)
+
+            return exec_command(*parsed_arguments)
+
+        # check to see if the number of required arguments is
+        # less than or equal to the number of arguments sent for the command.
+
+        if required_signature <= calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
             logging.debug('cleaned commands match command sig %s',
@@ -83,6 +96,19 @@ class Command:
             return exec_command(*parsed_arguments)
 
         return self.__commandsNotFound(primary_command, parsed_arguments)
+
+    def __get_number_of_required_arguments(self, exec_command):
+        command_args = getfullargspec(exec_command)
+        arg_defaults = command_args.defaults
+        all_args = command_args.args
+
+        if not all_args:
+            all_args = []
+
+        if not arg_defaults:
+            arg_defaults = []
+
+        return len(all_args) - len(arg_defaults)
 
     def __get_parsed_arguments(self, commands):
         commands = ' '.join(commands)

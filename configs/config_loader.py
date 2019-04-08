@@ -5,7 +5,7 @@ import yaml
 
 
 class ConfigLoader:
-    config = {}
+    config = {}  # type: dict
 
     def __init__(self, config_path=None):
         my_file = Path(config_path)
