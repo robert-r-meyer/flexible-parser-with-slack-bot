@@ -11,15 +11,15 @@ class DowntimeCommands(Command):
 
         # Add additional command functions and parsers here
         self._commands.update({
-            'for': self.get_downtime,
+            'historical': self.get_historical_downtimes,
             'set': self.set_downtime,
             'all': self.get_all_downtimes,
             'comments': self.get_comments,
             'alerts': self.get_alerts,
         })
 
-    def get_downtime(self, host_name):
-        return ' '.join(['TODO:', 'get downtime CheckMk', host_name])
+    def get_historical_downtimes(self):
+        return self.safe_call_as_json(self._api.view_historical_downtimes)
 
     def set_downtime(self, host_name, message, downTime=120):
         return self.safe_call_as_json(self._api.set_downtime, host_name,
