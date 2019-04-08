@@ -38,7 +38,7 @@ jobs:
 
       - run: mkdir test-reports
       - run: pipenv run coverage report 
-      - run: piepnv run coverage xml -o test-reports/coverage.xml
+      - run: pipenv run coverage xml -o test-reports/coverage.xml
 
       - store_test_results:
          path: test-reports
