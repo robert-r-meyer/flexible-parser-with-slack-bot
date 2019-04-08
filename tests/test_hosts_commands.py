@@ -18,7 +18,6 @@ class TestHostsCommands():
         assert self.parser.handle_command(
             'ping') == "This is a journey into Check Mk's host API commands."
 
-    @pytest.mark.skip()
     def test_command_block(self):
         assert [*self.parser._commands] == ['ping', 'help', 'add', 'edit']
 

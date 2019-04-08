@@ -36,6 +36,15 @@ jobs:
           command: |
             pipenv run pytest tests --random-order --cov=lighthouse
 
+      - run: mkdir test-reports
+      - run: coverage report && coverage xml -o test-reports/coverage.xml
+
+      - store_test_results:
+         path: test-reports
+
+      - store_artifacts:
+         path: test-reports
+
       - save_cache:
           key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
