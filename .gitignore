@@ -18,9 +18,11 @@ pytest.ini
 
 # Coverage Files
 .coverage
+test-reports
 
 
 # Floobits
 .floo*
 
 config.yml
+
