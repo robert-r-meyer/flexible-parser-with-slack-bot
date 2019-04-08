@@ -25,6 +25,6 @@ class HostCommands(Command):
         return self.safe_call_as_json(self._api.add_host, hostname, folder,
                                       ipaddress, alias, tags, **custom_attrs)
 
-    def edit_host(self, host_name, unset_attributes, **custom):
+    def edit_host(self, host_name, unset_attributes=None, **custom):
         return self.safe_call_as_json(
             self._api.edit_host(host_name, unset_attributes, **custom))
