@@ -27,7 +27,8 @@ yapf = "*"
 
 [packages]
 slackclient = "*"
-check-mk-web-api = {editable = true,git = "https://github.com/robert-r-meyer/check-mk-web-api.git",ref = "master"}
+check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git",editable = true}
+pyyaml = "*"
 
 [requires]
 python_version = "3.6"
