@@ -23,4 +23,11 @@ class FormatFor:
         # result = pd.read_json(data, typ="records")
         df = pd.DataFrame(blob)
 
-        return df.to_csv(index=False)
+        if type(blob) is list:
+            return df.to_csv(index=False)
+
+        # import pudb
+
+        # pudb.set_trace()
+
+        return None
