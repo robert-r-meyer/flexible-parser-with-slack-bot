@@ -1,9 +1,11 @@
 import logging
 from inspect import getfullargspec, signature
 
+import yaml
+
 from lighthouse.format import FormatFor
 
-logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.WARN)
+logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.WARN)
 
 # import pudb
 """
@@ -19,24 +21,35 @@ class Command:
 
     def __init__(self):
         self._commands = {"ping": self._ping, "help": self._help}
-        self._check = 'This is a journey into sound.'
+        self._check = "This is a journey into sound."
         self.response = None
-        self._command_name = 'Command'
+        self._command_name = "Command"
+        self._csv_formatted_methods = self.__load_csv_formats()
 
-    def handle_command(self, command='help'):
+    def __load_csv_formats(self):
+        with open("config.yml", "r") as ymlfile:
+            config = yaml.load(ymlfile, Loader=yaml.SafeLoader)
+            key = "FUNCTION_RETURN_FORMAT"
+
+            if key in config.keys():
+                return config[key]
+
+            return {}
+
+    def handle_command(self, command="help"):
         """
         Entry point to commands
         """
 
         # Grab primary command request
         # Stash rest of arguments for future use
-        pass_through_commands = command.split(' ')
+        pass_through_commands = command.split(" ")
         primary_command = pass_through_commands.pop(0)
 
         parsed_arguments = self.__get_parsed_arguments(pass_through_commands)
 
-        logging.debug('Primary Command %s', primary_command)
-        logging.debug('Pass through commands %s', parsed_arguments)
+        logging.debug("Primary Command %s", primary_command)
+        logging.debug("Pass through commands %s", parsed_arguments)
 
         # Check if the command asked for is in the list of commands we know
 
@@ -49,15 +62,15 @@ class Command:
         # Verify that the exec_command here is a method.
         # if it is a method, check for arg length to match
 
-        if hasattr(exec_command, 'handle_command'):
-            logging.debug('recursive call to handle command %s',
+        if hasattr(exec_command, "handle_command"):
+            logging.debug("recursive call to handle command %s",
                           primary_command)
             # this is a secondary command parser in its own right.
             # In this case, call the handle command method and start all
             # this again on its own parser.
 
             return self._commands[primary_command].handle_command(
-                ' '.join(pass_through_commands))
+                " ".join(pass_through_commands))
 
         # Inspect the method and determine the number of arguments
         # the method takes
@@ -71,7 +84,7 @@ class Command:
         # execute the command and return the result
 
         if not parsed_arguments and method_signature == 0:
-            logging.debug('No pass through, execute directly', primary_command)
+            logging.debug("No pass through, execute directly", primary_command)
 
             if callable(exec_command):
                 return exec_command()
@@ -79,7 +92,7 @@ class Command:
         if method_signature == calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug('cleaned commands match command sig %s',
+            logging.debug("cleaned commands match command sig %s",
                           parsed_arguments)
 
             return exec_command(*parsed_arguments)
@@ -90,7 +103,7 @@ class Command:
         if required_signature <= calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug('cleaned commands match command sig %s',
+            logging.debug("cleaned commands match command sig %s",
                           parsed_arguments)
 
             return exec_command(*parsed_arguments)
@@ -111,10 +124,10 @@ class Command:
         return len(all_args) - len(arg_defaults)
 
     def __get_parsed_arguments(self, commands):
-        commands = ' '.join(commands)
+        commands = " ".join(commands)
         quoted_arguments = commands.partition('"')[2].partition('"')[0]
-        command_args = commands.replace('"' + quoted_arguments + '"', '')
-        cleaned_commands = command_args.split(' ')
+        command_args = commands.replace('"' + quoted_arguments + '"', "")
+        cleaned_commands = command_args.split(" ")
 
         if quoted_arguments:
             cleaned_commands.append(quoted_arguments)
@@ -127,10 +140,10 @@ class Command:
         # This isn't a subparser,
         # and we didn't find a command with the correct number of arguments
         # so we will show the help text and return out of the command handler
-        results = ' '.join([
+        results = " ".join([
             "Sorry I don't understand the command: `%s`." % primary_command,
             self.__help_text_args(string_parsed_commands),
-            self._help()
+            self._help(),
         ])
 
         logging.debug(results)
@@ -138,12 +151,12 @@ class Command:
         return results
 
     def __help_text_args(self, args):
-        logging.debug('args', *args)
+        logging.debug("args", *args)
 
-        if not (' ').join(args).strip():
+        if not (" ").join(args).strip():
             return "No arguments were passed."
 
-        return (' ').join(["with the args of: ", "`", *args, "`"])
+        return (" ").join(["with the args of: ", "`", *args, "`"])
 
     def _ping(self):
         return self._check
@@ -153,14 +166,16 @@ class Command:
         Blank response of help concatenating currently supported commands
         """
 
-        response = ("Currently %s supports the following commands:" %
-                    self._command_name)
+        response = "Currently %s supports the following commands:" % self._command_name
 
         return "\r\n".join([response] + [*self._commands])
 
-    def safe_call_as_json(self, function, *args):
+    def safe_call(self, function, *args):
         try:
             blob = function(args)
+
+            if function.__name__ in self._csv_formatted_methods:
+                return FormatFor.slack_csv_blob(blob)
 
             return FormatFor.slack_json_as_code_blob(blob)
         except Exception as inst:

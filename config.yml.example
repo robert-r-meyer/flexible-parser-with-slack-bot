@@ -4,3 +4,7 @@ CHECK_MK_USER: automation
 CHECK_MK_PASSWORD: automation_password
 SLACK_CLIENT_NAME: slack_client_name
 SLACK_CLIENT_TOKEN: slack_token
+
+
+FUNCTION_RETURN_FORMATTING:
+
