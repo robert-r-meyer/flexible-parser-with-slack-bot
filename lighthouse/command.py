@@ -1,4 +1,5 @@
 import logging
+import os
 from inspect import getfullargspec, signature
 
 import yaml
@@ -24,17 +25,90 @@ class Command:
         self._check = "This is a journey into sound."
         self.response = None
         self._command_name = "Command"
-        self._csv_formatted_methods = self.__load_csv_formats()
 
-    def __load_csv_formats(self):
-        with open("config.yml", "r") as ymlfile:
-            config = yaml.load(ymlfile, Loader=yaml.SafeLoader)
-            key = "FUNCTION_RETURN_FORMAT"
+    def __methods_to_format_as_csv(self):
+        return os.getenv("FUNCTION_RETURN_FORMAT", {})
 
-            if key in config.keys():
-                return config[key]
+    def __get_number_of_required_arguments(self, exec_command):
+        command_args = getfullargspec(exec_command)
+        arg_defaults = command_args.defaults
+        all_args = command_args.args
 
-            return {}
+        if not all_args:
+            all_args = []
+
+        if not arg_defaults:
+            arg_defaults = []
+
+        return len(all_args) - len(arg_defaults)
+
+    def __get_parsed_arguments(self, commands):
+        commands = " ".join(commands)
+        quoted_arguments = commands.partition('"')[2].partition('"')[0]
+        command_args = commands.replace('"' + quoted_arguments + '"', "")
+        cleaned_commands = command_args.split(" ")
+
+        if quoted_arguments:
+            cleaned_commands.append(quoted_arguments)
+
+        cleaned_commands = list(filter(None, cleaned_commands))
+
+        return cleaned_commands
+
+    def __commandsNotFound(self, primary_command, string_parsed_commands):
+        # This isn't a subparser,
+        # and we didn't find a command with the correct number of arguments
+        # so we will show the help text and return out of the command handler
+        results = " ".join([
+            "Sorry I don't understand the command: `%s`." % primary_command,
+            self.__help_text_args(string_parsed_commands),
+            self._help(),
+        ])
+
+        logging.debug(results)
+
+        return results
+
+    def __help_text_args(self, args):
+        logging.debug("args", *args)
+
+        if not (" ").join(args).strip():
+            return "No arguments were passed."
+
+        return (" ").join(["with the args of: ", "`", *args, "`"])
+
+    def _ping(self):
+        return self._check
+
+    def _help(self):
+        """
+        Blank response of help concatenating currently supported commands
+        """
+
+        response = "Currently %s supports the following commands:" % self._command_name
+
+        return "\r\n".join([response] + [*self._commands])
+
+    def safe_call(self, function, *args):
+        """
+        Safe call allows for command bases to ensure that the call 
+        they make will not return an error.
+
+        This also allows for handling of csv or json results
+        """
+        try:
+            blob = function(args)
+
+            if function.__name__ in self.__methods_to_format_as_csv():
+                logging.debug("Returning method formatted as csv")
+
+                return FormatFor.slack_csv_blob(blob)
+
+            logging.debug("Returning method formatted as JSON")
+
+            return FormatFor.slack_json_as_code_blob(blob)
+        except Exception as inst:
+            return inst
 
     def handle_command(self, command="help"):
         """
@@ -109,74 +183,3 @@ class Command:
             return exec_command(*parsed_arguments)
 
         return self.__commandsNotFound(primary_command, parsed_arguments)
-
-    def __get_number_of_required_arguments(self, exec_command):
-        command_args = getfullargspec(exec_command)
-        arg_defaults = command_args.defaults
-        all_args = command_args.args
-
-        if not all_args:
-            all_args = []
-
-        if not arg_defaults:
-            arg_defaults = []
-
-        return len(all_args) - len(arg_defaults)
-
-    def __get_parsed_arguments(self, commands):
-        commands = " ".join(commands)
-        quoted_arguments = commands.partition('"')[2].partition('"')[0]
-        command_args = commands.replace('"' + quoted_arguments + '"', "")
-        cleaned_commands = command_args.split(" ")
-
-        if quoted_arguments:
-            cleaned_commands.append(quoted_arguments)
-
-        cleaned_commands = list(filter(None, cleaned_commands))
-
-        return cleaned_commands
-
-    def __commandsNotFound(self, primary_command, string_parsed_commands):
-        # This isn't a subparser,
-        # and we didn't find a command with the correct number of arguments
-        # so we will show the help text and return out of the command handler
-        results = " ".join([
-            "Sorry I don't understand the command: `%s`." % primary_command,
-            self.__help_text_args(string_parsed_commands),
-            self._help(),
-        ])
-
-        logging.debug(results)
-
-        return results
-
-    def __help_text_args(self, args):
-        logging.debug("args", *args)
-
-        if not (" ").join(args).strip():
-            return "No arguments were passed."
-
-        return (" ").join(["with the args of: ", "`", *args, "`"])
-
-    def _ping(self):
-        return self._check
-
-    def _help(self):
-        """
-        Blank response of help concatenating currently supported commands
-        """
-
-        response = "Currently %s supports the following commands:" % self._command_name
-
-        return "\r\n".join([response] + [*self._commands])
-
-    def safe_call(self, function, *args):
-        try:
-            blob = function(args)
-
-            if function.__name__ in self._csv_formatted_methods:
-                return FormatFor.slack_csv_blob(blob)
-
-            return FormatFor.slack_json_as_code_blob(blob)
-        except Exception as inst:
-            return inst

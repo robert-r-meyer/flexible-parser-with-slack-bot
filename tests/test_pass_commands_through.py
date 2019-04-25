@@ -1,13 +1,9 @@
 import json
-from unittest.mock import MagicMock
 
 import check_mk_web_api
-import pytest
 
 from lighthouse.format import FormatFor
 from lighthouse.master_control_program import MasterControlProgram
-
-# from pytest_mock import mocker
 
 
 class TestCommandPassing:
