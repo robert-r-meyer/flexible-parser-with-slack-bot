@@ -20,14 +20,9 @@ class FormatFor:
         # Blob is the json back from the server
         # data_strucutre tells us how to format it
 
-        # result = pd.read_json(data, typ="records")
         df = pd.DataFrame(blob)
 
         if type(blob) is list:
             return df.to_csv(index=False)
-
-        # import pudb
-
-        # pudb.set_trace()
 
         return None
