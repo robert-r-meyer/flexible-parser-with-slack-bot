@@ -1,5 +1,6 @@
 import logging
 from inspect import getfullargspec, signature
+from configs.config_loader import ConfigLoader
 
 import yaml
 
@@ -20,21 +21,22 @@ class Command:
     """
 
     def __init__(self):
+        variables = ConfigLoader("../config.yml")
+
         self._commands = {"ping": self._ping, "help": self._help}
         self._check = "This is a journey into sound."
         self.response = None
         self._command_name = "Command"
+        self._config = variables.config
         self._csv_formatted_methods = self.__load_csv_formats()
 
     def __load_csv_formats(self):
-        with open("config.yml", "r") as ymlfile:
-            config = yaml.load(ymlfile, Loader=yaml.SafeLoader)
-            key = "FUNCTION_RETURN_FORMAT"
+        key = "FUNCTION_RETURN_FORMAT"
 
-            if key in config.keys():
-                return config[key]
+        if key in self._config.keys():
+            return self._config[key]
 
-            return {}
+        return {}
 
     def __get_number_of_required_arguments(self, exec_command):
         command_args = getfullargspec(exec_command)
