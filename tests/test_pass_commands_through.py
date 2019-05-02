@@ -1,13 +1,12 @@
 import json
 
-import pytest
-from pytest_mock import mocker
+import check_mk_web_api
 
 from lighthouse.format import FormatFor
 from lighthouse.master_control_program import MasterControlProgram
 
 
-class TestCommandPassing():
+class TestCommandPassing:
     def setup(self):
         self.parser = MasterControlProgram()
 
@@ -15,23 +14,23 @@ class TestCommandPassing():
         assert self.parser._ping() == "End of Line."
 
     def test_calling_ping(self):
-        assert self.parser.handle_command('ping') == 'End of Line.'
+        assert self.parser.handle_command("ping") == "End of Line."
 
     def test_command_block(self):
-        assert [*self.parser._commands] == ['ping', 'help', 'cmk']
+        assert [*self.parser._commands] == ["ping", "help", "cmk"]
 
     def test_pass_through(self):
-        response = self.parser.handle_command('cmk ping')
-        assert response == 'This is a journey into Check Mk.'
+        response = self.parser.handle_command("cmk ping")
+        assert response == "This is a journey into Check Mk."
 
     def test_pass_through_nope(self):
         """
         Pass Check MK command subcommands to CheckMkCommand processor
         nope should be passed to checkmk and return help block
         """
-        block = self.parser.handle_command('cmk nope')
+        block = self.parser.handle_command("cmk nope")
 
-        completed_block = '\r\n'.join([
+        completed_block = "\r\n".join([
             "Sorry I don't understand the command: `nope`. " +
             "No arguments were passed. " +
             "Currently Check Mk supports the following commands:",
@@ -49,9 +48,9 @@ class TestCommandPassing():
         Pass Check MK command subcommands to CheckMkCommand processor
         `ping` should be passed to checkmk and return the ping result
         """
-        block = self.parser.handle_command('cmk ping')
+        block = self.parser.handle_command("cmk ping")
 
-        assert block == 'This is a journey into Check Mk.'
+        assert block == "This is a journey into Check Mk."
 
     def test_pass_through_get_all(self, mocker):
         """
@@ -70,14 +69,17 @@ class TestCommandPassing():
                 "attributes": {},
                 "hostname": "gewrpp1dv",
                 "path": "tests"
-            }
+            },
         }
 
-        get_all_hosts = mocker.patch(
-            'check_mk_web_api.web_api.WebApi.get_all_hosts',
-            return_value=expected)
+        get_all_hosts = mocker.patch.object(
+            check_mk_web_api.web_api.WebApi,
+            "get_all_hosts",
+            autospec=True,
+            return_value=expected,
+        )
 
-        block = self.parser.handle_command('cmk get all')
+        block = self.parser.handle_command("cmk get all")
         formatted_block = FormatFor.slack_json_as_code_blob(expected)
         assert block == formatted_block
 
@@ -90,12 +92,16 @@ class TestCommandPassing():
         `get all` should be passed to checkmk and return the get all hosts
         from GetCommands processor
         """
-        expected = {'expected': True}
+        expected = {"expected": True}
 
-        get_host = mocker.patch(
-            'check_mk_web_api.web_api.WebApi.get_host', return_value=expected)
+        get_host = mocker.patch.object(
+            check_mk_web_api.web_api.WebApi,
+            "get_host",
+            autospec=True,
+            return_value=expected,
+        )
 
-        block = self.parser.handle_command('cmk get host my-host')
+        block = self.parser.handle_command("cmk get host my-host")
         formatted_block = FormatFor.slack_json_as_code_blob(expected)
         assert block == formatted_block
-        get_host.assert_called_once_with(('my-host', ))
+        get_host.assert_called_once()
