@@ -1,5 +1,4 @@
 import logging
-import os
 from inspect import getfullargspec, signature
 
 import yaml
@@ -25,9 +24,17 @@ class Command:
         self._check = "This is a journey into sound."
         self.response = None
         self._command_name = "Command"
+        self._csv_formatted_methods = self.__load_csv_formats()
 
-    def __methods_to_format_as_csv(self):
-        return os.getenv("FUNCTION_RETURN_FORMAT", {})
+    def __load_csv_formats(self):
+        with open("config.yml", "r") as ymlfile:
+            config = yaml.load(ymlfile, Loader=yaml.SafeLoader)
+            key = "FUNCTION_RETURN_FORMAT"
+
+            if key in config.keys():
+                return config[key]
+
+            return {}
 
     def __get_number_of_required_arguments(self, exec_command):
         command_args = getfullargspec(exec_command)
@@ -59,11 +66,13 @@ class Command:
         # This isn't a subparser,
         # and we didn't find a command with the correct number of arguments
         # so we will show the help text and return out of the command handler
-        results = " ".join([
-            "Sorry I don't understand the command: `%s`." % primary_command,
-            self.__help_text_args(string_parsed_commands),
-            self._help(),
-        ])
+        results = " ".join(
+            [
+                "Sorry I don't understand the command: `%s`." % primary_command,
+                self.__help_text_args(string_parsed_commands),
+                self._help(),
+            ]
+        )
 
         logging.debug(results)
 
@@ -99,12 +108,8 @@ class Command:
         try:
             blob = function(args)
 
-            if function.__name__ in self.__methods_to_format_as_csv():
-                logging.debug("Returning method formatted as csv")
-
+            if function.__name__ in self._csv_formatted_methods:
                 return FormatFor.slack_csv_blob(blob)
-
-            logging.debug("Returning method formatted as JSON")
 
             return FormatFor.slack_json_as_code_blob(blob)
         except Exception as inst:
@@ -137,22 +142,21 @@ class Command:
         # if it is a method, check for arg length to match
 
         if hasattr(exec_command, "handle_command"):
-            logging.debug("recursive call to handle command %s",
-                          primary_command)
+            logging.debug("recursive call to handle command %s", primary_command)
             # this is a secondary command parser in its own right.
             # In this case, call the handle command method and start all
             # this again on its own parser.
 
             return self._commands[primary_command].handle_command(
-                " ".join(pass_through_commands))
+                " ".join(pass_through_commands)
+            )
 
         # Inspect the method and determine the number of arguments
         # the method takes
 
         calling_signature = len(parsed_arguments)
         method_signature = len(signature(exec_command).parameters)
-        required_signature = self.__get_number_of_required_arguments(
-            exec_command)
+        required_signature = self.__get_number_of_required_arguments(exec_command)
 
         # if there are no additional arguments passed,
         # execute the command and return the result
@@ -166,8 +170,7 @@ class Command:
         if method_signature == calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug("cleaned commands match command sig %s",
-                          parsed_arguments)
+            logging.debug("cleaned commands match command sig %s", parsed_arguments)
 
             return exec_command(*parsed_arguments)
 
@@ -177,8 +180,7 @@ class Command:
         if required_signature <= calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug("cleaned commands match command sig %s",
-                          parsed_arguments)
+            logging.debug("cleaned commands match command sig %s", parsed_arguments)
 
             return exec_command(*parsed_arguments)
 
