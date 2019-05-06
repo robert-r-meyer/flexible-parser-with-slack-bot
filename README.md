@@ -143,6 +143,10 @@ There are examples of both simple and complicated commands in the examples folde
 
 [examples](./examples)
 
+### Example of CSV format with lighthouse
+Here is an example of CSV formatting using conf.yaml and lighthouse 
+[examples](./examples/simple_command/simple_command.py)
+
 
 ## Additional notes
 We have [Max Brennerm](https://github.com/brennerm) to thank for CheckMk implementation

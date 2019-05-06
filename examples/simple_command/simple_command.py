@@ -15,4 +15,7 @@ class SimpleCommand(Command):
         self._commands.update({'biggs': self.biggs_name})
 
     def biggs_name(self):
-        return 'Darklighter'
+        """
+        This returns nested array of comments in csv
+        """
+        return [['one', 'hello', 'world'],['two', 'three', 'four']]
