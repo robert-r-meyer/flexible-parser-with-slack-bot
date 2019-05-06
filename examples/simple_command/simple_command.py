@@ -18,4 +18,4 @@ class SimpleCommand(Command):
         """
         This returns nested array of comments in csv
         """
-        return ['one', 'hello', 'world']['two', 'three', 'four']
+        return (['one', 'hello', 'world'],['two', 'three', 'four'])
