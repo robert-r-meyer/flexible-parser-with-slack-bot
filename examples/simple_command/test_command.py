@@ -57,3 +57,8 @@ class TestCommandBase():
         block = self.parser.handle_command('biggs')
         expected_block = 'Darklighter'
         assert block == expected_block
+
+
+        
+
+
