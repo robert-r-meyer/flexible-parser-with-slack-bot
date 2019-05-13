@@ -2,7 +2,7 @@ import logging
 import os
 import time
 
-from slackclient import SlackClient
+from slack import RTMClient, WebClient
 
 from configs.config_loader import ConfigLoader
 from lighthouse.event import Event
@@ -23,7 +23,8 @@ class Bot:
         path = os.path.join(ROOT_DIR, "..", "config.yml")
         variables = ConfigLoader(path)
 
-        self.slack_client = SlackClient(variables.config["SLACK_CLIENT_TOKEN"])
+        self.web_slack_client = WebClient(variables.config["SLACK_CLIENT_TOKEN"])
+        self.rtm_slack_client = RTMClient(token=variables.config["SLACK_CLIENT_TOKEN"])
         self.bot_name = variables.config["SLACK_CLIENT_NAME"]
         self.bot_id = self._get_bot_id()
         self.valid = self.valid_slack_bot()
@@ -41,7 +42,7 @@ class Bot:
         and returns user name
         """
 
-        api_call = self.slack_client.api_call("users.list")
+        api_call = self.web_slack_client.api_call("users.list")
 
         if api_call.get("ok"):
             # retrieve all users so we can find our bot
@@ -66,22 +67,3 @@ class Bot:
             )
 
         return self.bot_id is not None
-
-    def listen(self):
-        """
-        Connects and listens for commands to SLACK_CLIENT_NAME.
-        Listen waits 1 second between sending messages to parser
-        for excitation.
-        """
-
-        if self.valid_slack_bot() and self.slack_client.rtm_connect(
-            with_team_state=False
-        ):
-            logging.debug("Successfully connected, listening for commands")
-
-            while True:
-                self.event.wait_for_event()
-
-                time.sleep(1)
-
-            logging.debug("Exiting Listen for Slack client")
