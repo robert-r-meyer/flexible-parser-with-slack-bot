@@ -25,12 +25,13 @@ pytest-xdist = "*"
 vcrpy = "*"
 yapf = "*"
 flootty = "*"
+duallog = "*"
 
 [packages]
-slackclient = "*"
-check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git",editable = true}
+check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git"}
 pyyaml = "*"
 pandas = "*"
+slackclient = "==2.0.0"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
