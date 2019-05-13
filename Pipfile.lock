@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "111e874844cde039860c01cffa01413aea3064e2b7dd23bb4b07c30486655c13"
+            "sha256": "070d346f78949011120e4aa1cc99b4f88a248d4c6b0ac4e19c6de4139aa8d799"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -107,6 +107,14 @@
         "check-mk-web-api": {
             "git": "https://github.com/robert-r-meyer/check-mk-web-api.git",
             "ref": "643fba1d81f7113a9784cb3d9e7530fa9c3592bf"
+        },
+        "duallog": {
+            "hashes": [
+                "sha256:3290d68096a999da9a373b13fe47660ae5115fb2d06037d89edd606eba8df014",
+                "sha256:8b40b15d28df1dcd6ec6e5df343f11b5e5aa1fdbf9c48899a05e6008721ff3b2"
+            ],
+            "index": "pypi",
+            "version": "==0.20"
         },
         "idna": {
             "hashes": [
@@ -376,14 +384,6 @@
                 "sha256:f684034d135af4c6cbb949b8a4d2ed61634515257a67299e5f940fbaa34377f5"
             ],
             "version": "==0.6.0"
-        },
-        "duallog": {
-            "hashes": [
-                "sha256:3290d68096a999da9a373b13fe47660ae5115fb2d06037d89edd606eba8df014",
-                "sha256:8b40b15d28df1dcd6ec6e5df343f11b5e5aa1fdbf9c48899a05e6008721ff3b2"
-            ],
-            "index": "pypi",
-            "version": "==0.20"
         },
         "entrypoints": {
             "hashes": [
