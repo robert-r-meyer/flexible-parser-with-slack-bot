@@ -13,7 +13,7 @@ class Event:
         self.bot = bot
         self.command = MasterControlProgram()
 
-    def _handle_event(self, user, command, channel):
+    def handle_event(self, user, command, channel):
         if command and channel:
             logging.debug(
                 "Received command: %s in channel: %s from user %s",
@@ -23,6 +23,6 @@ class Event:
             )
 
             response = self.command.handle_user_command(user, command)
-            self.bot.web_slack_client.api_call(
-                "chat.postMessage", channel=channel, text=response, as_user=True
+            self.bot.web_slack_client.chat_postMessage(
+                channel=channel, text=response, as_user=True
             )

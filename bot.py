@@ -31,7 +31,7 @@ def wait_for_event(**event):
     logging.debug(message)
 
     if listener.bot_id in message["text"]:
-        listener.handle_event(
+        listener.event.handle_event(
             message["user"],
             message["text"].split(listener.bot_id)[1].strip().lower(),
             message["channel"],
