@@ -25,6 +25,9 @@ pytest-sugar = "*"
 pytest-xdist = "*"
 vcrpy = "*"
 yapf = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+sphinx-jekyll-builder = "*"
 
 [packages]
 check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git"}
