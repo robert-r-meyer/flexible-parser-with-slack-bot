@@ -164,7 +164,7 @@ class Command:
         # execute the command and return the result
 
         if not parsed_arguments and method_signature == 0:
-            logging.debug("No pass through, execute directly", primary_command)
+            logging.debug("No pass through, execute directly %s", primary_command)
 
             if callable(exec_command):
                 return exec_command()
