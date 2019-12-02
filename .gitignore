@@ -25,7 +25,7 @@ test-reports
 .floo*
 logs
 
-./config.yml
+config.yml
 
 .idea
 venv/
