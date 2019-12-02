@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>lighthouse.command &mdash; Flexable Parser With SlackBot 0.9.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Flexable Parser With SlackBot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Flexable Parser With SlackBot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>lighthouse.command</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lighthouse.command</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">getfullargspec</span><span class="p">,</span> <span class="n">signature</span>
+<span class="kn">from</span> <span class="nn">configs.config_loader</span> <span class="kn">import</span> <span class="n">ConfigLoader</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+<span class="kn">from</span> <span class="nn">lighthouse.format</span> <span class="kn">import</span> <span class="n">FormatFor</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(levelname)s</span><span class="s2">:</span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">WARN</span><span class="p">)</span>
+
+<span class="c1"># import pudb</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Top level module using command in order to</span>
+<span class="sd">parse and call to sub modules</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Command"><a class="viewcode-back" href="../../lighthouse.html#lighthouse.command.Command">[docs]</a><span class="k">class</span> <span class="nc">Command</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Takes commands and calls correct sub parsers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">variables</span> <span class="o">=</span> <span class="n">ConfigLoader</span><span class="p">(</span><span class="s2">&quot;../config.yml&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_commands</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ping&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ping</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_help</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check</span> <span class="o">=</span> <span class="s2">&quot;This is a journey into sound.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_command_name</span> <span class="o">=</span> <span class="s2">&quot;Command&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">variables</span><span class="o">.</span><span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_csv_formatted_methods</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__load_csv_formats</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__load_csv_formats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;FUNCTION_RETURN_FORMAT&quot;</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">__get_number_of_required_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exec_command</span><span class="p">):</span>
+        <span class="n">command_args</span> <span class="o">=</span> <span class="n">getfullargspec</span><span class="p">(</span><span class="n">exec_command</span><span class="p">)</span>
+        <span class="n">arg_defaults</span> <span class="o">=</span> <span class="n">command_args</span><span class="o">.</span><span class="n">defaults</span>
+        <span class="n">all_args</span> <span class="o">=</span> <span class="n">command_args</span><span class="o">.</span><span class="n">args</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">all_args</span><span class="p">:</span>
+            <span class="n">all_args</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">arg_defaults</span><span class="p">:</span>
+            <span class="n">arg_defaults</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_args</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">arg_defaults</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__get_parsed_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">commands</span><span class="p">):</span>
+        <span class="n">commands</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">commands</span><span class="p">)</span>
+        <span class="n">quoted_arguments</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">command_args</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">quoted_arguments</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">cleaned_commands</span> <span class="o">=</span> <span class="n">command_args</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">quoted_arguments</span><span class="p">:</span>
+            <span class="n">cleaned_commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quoted_arguments</span><span class="p">)</span>
+
+        <span class="n">cleaned_commands</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">cleaned_commands</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">cleaned_commands</span>
+
+    <span class="k">def</span> <span class="nf">__commandsNotFound</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">primary_command</span><span class="p">,</span> <span class="n">string_parsed_commands</span><span class="p">):</span>
+        <span class="c1"># This isn&#39;t a subparser,</span>
+        <span class="c1"># and we didn&#39;t find a command with the correct number of arguments</span>
+        <span class="c1"># so we will show the help text and return out of the command handler</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="s2">&quot;Sorry I don&#39;t understand the command: `</span><span class="si">%s</span><span class="s2">`.&quot;</span> <span class="o">%</span> <span class="n">primary_command</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__help_text_args</span><span class="p">(</span><span class="n">string_parsed_commands</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_help</span><span class="p">(),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">results</span>
+
+    <span class="k">def</span> <span class="nf">__help_text_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;args&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s2">&quot;No arguments were passed.&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;with the args of: &quot;</span><span class="p">,</span> <span class="s2">&quot;`&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="s2">&quot;`&quot;</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_ping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check</span>
+
+    <span class="k">def</span> <span class="nf">_help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Blank response of help concatenating currently supported commands</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;Currently </span><span class="si">%s</span><span class="s2"> supports the following commands:&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_command_name</span>
+
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">response</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_commands</span><span class="p">])</span>
+
+<div class="viewcode-block" id="Command.safe_call"><a class="viewcode-back" href="../../lighthouse.html#lighthouse.command.Command.safe_call">[docs]</a>    <span class="k">def</span> <span class="nf">safe_call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Safe call allows for command bases to ensure that the call </span>
+<span class="sd">        they make will not return an error.</span>
+
+<span class="sd">        This also allows for handling of csv or json results</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">blob</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">function</span><span class="o">.</span><span class="vm">__name__</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_csv_formatted_methods</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">FormatFor</span><span class="o">.</span><span class="n">slack_csv_blob</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">FormatFor</span><span class="o">.</span><span class="n">slack_json_as_code_blob</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">inst</span></div>
+
+<div class="viewcode-block" id="Command.handle_command"><a class="viewcode-back" href="../../lighthouse.html#lighthouse.command.Command.handle_command">[docs]</a>    <span class="k">def</span> <span class="nf">handle_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="s2">&quot;help&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Entry point to commands</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Grab primary command request</span>
+        <span class="c1"># Stash rest of arguments for future use</span>
+        <span class="n">pass_through_commands</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="n">primary_command</span> <span class="o">=</span> <span class="n">pass_through_commands</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">parsed_arguments</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_parsed_arguments</span><span class="p">(</span><span class="n">pass_through_commands</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Primary Command </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">primary_command</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Pass through commands </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">parsed_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Check if the command asked for is in the list of commands we know</span>
+
+        <span class="k">if</span> <span class="n">primary_command</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_commands</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commandsNotFound</span><span class="p">(</span><span class="n">primary_command</span><span class="p">,</span> <span class="n">parsed_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Set executed commands</span>
+        <span class="n">exec_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_commands</span><span class="p">[</span><span class="n">primary_command</span><span class="p">]</span>
+
+        <span class="c1"># Verify that the exec_command here is a method.</span>
+        <span class="c1"># if it is a method, check for arg length to match</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">exec_command</span><span class="p">,</span> <span class="s2">&quot;handle_command&quot;</span><span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;recursive call to handle command </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">primary_command</span><span class="p">)</span>
+            <span class="c1"># this is a secondary command parser in its own right.</span>
+            <span class="c1"># In this case, call the handle command method and start all</span>
+            <span class="c1"># this again on its own parser.</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_commands</span><span class="p">[</span><span class="n">primary_command</span><span class="p">]</span><span class="o">.</span><span class="n">handle_command</span><span class="p">(</span>
+                <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pass_through_commands</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Inspect the method and determine the number of arguments</span>
+        <span class="c1"># the method takes</span>
+
+        <span class="n">calling_signature</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">parsed_arguments</span><span class="p">)</span>
+        <span class="n">method_signature</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">signature</span><span class="p">(</span><span class="n">exec_command</span><span class="p">)</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="n">required_signature</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_number_of_required_arguments</span><span class="p">(</span><span class="n">exec_command</span><span class="p">)</span>
+
+        <span class="c1"># if there are no additional arguments passed,</span>
+        <span class="c1"># execute the command and return the result</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed_arguments</span> <span class="ow">and</span> <span class="n">method_signature</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No pass through, execute directly&quot;</span><span class="p">,</span> <span class="n">primary_command</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">exec_command</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">exec_command</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">method_signature</span> <span class="o">==</span> <span class="n">calling_signature</span><span class="p">:</span>
+            <span class="c1"># additional arguments passed to the command, execute the</span>
+            <span class="c1"># command with those arguments</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;cleaned commands match command sig </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">parsed_arguments</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">exec_command</span><span class="p">(</span><span class="o">*</span><span class="n">parsed_arguments</span><span class="p">)</span>
+
+        <span class="c1"># check to see if the number of required arguments is</span>
+        <span class="c1"># less than or equal to the number of arguments sent for the command.</span>
+
+        <span class="k">if</span> <span class="n">required_signature</span> <span class="o">&lt;=</span> <span class="n">calling_signature</span><span class="p">:</span>
+            <span class="c1"># additional arguments passed to the command, execute the</span>
+            <span class="c1"># command with those arguments</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;cleaned commands match command sig </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">parsed_arguments</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">exec_command</span><span class="p">(</span><span class="o">*</span><span class="n">parsed_arguments</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__commandsNotFound</span><span class="p">(</span><span class="n">primary_command</span><span class="p">,</span> <span class="n">parsed_arguments</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Robert R. Meyer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
