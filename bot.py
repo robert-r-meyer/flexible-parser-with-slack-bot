@@ -10,7 +10,7 @@ import duallog
 import logging
 
 # Set up dual logging and tell duallog where to store the logfiles.
-duallog.setup("Lighthouse")
+duallog.setup("logs")
 
 # Bot will run and wait on 1 second intervals.
 # This will parse and run commands based on
@@ -26,15 +26,18 @@ def wait_for_event(**event):
     submission of commands transitions to mcp for handling
     """
     logging.debug("Event received")
-    message = event["data"]
+    data = event["data"]
 
-    logging.debug(message)
+    if "subtype" in data and data["subtype"] == "message_changed":
+        logging.debug("Alteration of messages are not handled")
 
-    if listener.bot_id in message["text"]:
+        return
+
+    if "text" in data and listener.bot_id in data["text"]:
         listener.event.handle_event(
-            message["user"],
-            message["text"].split(listener.bot_id)[1].strip().lower(),
-            message["channel"],
+            data["user"],
+            data["text"].split(listener.bot_id)[1].strip().lower(),
+            data["channel"],
         )
 
 

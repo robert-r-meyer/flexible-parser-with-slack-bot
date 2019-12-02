@@ -23,8 +23,9 @@ test-reports
 
 # Floobits
 .floo*
+logs
 
-configs/config.yml
+./config.yml
 
 .idea
 venv/
