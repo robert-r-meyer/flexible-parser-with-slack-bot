@@ -2,7 +2,13 @@
 [![CircleCI](https://circleci.com/gh/robert-r-meyer/flexible-parser-with-slack-bot.svg?style=svg)](https://circleci.com/gh/robert-r-meyer/flexible-parser-with-slack-bot)
 
 ## Deployment
-TODO: ADD
+Slackbot is built to be deployed in a Docker container.
+
+There is a requirement that the `config.yml` is updated. This stores your Slack credentials.
+
+- Run `docker build` command to build a new container
+- Start env `docker run <docker image name>`
+- Profit
 
 ## Quick start:
 
