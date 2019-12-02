@@ -8,7 +8,7 @@ coverage = "*"
 flake8 = "*"
 flootty = "*"
 ipython = "*"
-isorjt = "*"
+isort = "*"
 jupyter = "*"
 jupyterlab = "*"
 mypy = "*"
@@ -24,20 +24,20 @@ pytest-random-order = "*"
 pytest-sugar = "*"
 pytest-vcr = "*"
 pytest-xdist = "*"
+sphinx = "*"
+sphinx-jekyll-builder = "*"
+sphinx-rtd-theme = "*"
 vcrpy = "*"
 yapf = "*"
-sphinx = "*"
-sphinx-rtd-theme = "*"
-sphinx-jekyll-builder = "*"
 
 
 [packages]
 check-mk-web-api = {ref = "master",git = "https://github.com/robert-r-meyer/check-mk-web-api.git"}
 duallog = "*"
+idna-ssl = "*"
 pandas = "*"
 pyyaml = "*"
 slackclient = "==2.0.0"
-idna-ssl = "*"
 
 [requires]
 python_version = "3.6"
