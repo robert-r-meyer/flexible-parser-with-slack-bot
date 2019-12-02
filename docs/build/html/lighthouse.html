@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>lighthouse package &mdash; Flexable Parser With SlackBot 0.9.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Flexable Parser With SlackBot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">lighthouse package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lighthouse.bot">lighthouse.bot module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.check_mk_command">lighthouse.check_mk_command module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.command">lighthouse.command module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.downtime_commands">lighthouse.downtime_commands module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.event">lighthouse.event module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.format">lighthouse.format module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.get_commands">lighthouse.get_commands module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.host_commands">lighthouse.host_commands module</a></li>
+<li><a class="reference internal" href="#module-lighthouse.master_control_program">lighthouse.master_control_program module</a></li>
+<li><a class="reference internal" href="#module-lighthouse">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Flexable Parser With SlackBot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>lighthouse package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/lighthouse.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lighthouse-package">
+<h1>lighthouse package<a class="headerlink" href="#lighthouse-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lighthouse.bot">
+<span id="lighthouse-bot-module"></span><h2>lighthouse.bot module<a class="headerlink" href="#module-lighthouse.bot" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.bot.Bot">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.bot.</code><code class="sig-name descname">Bot</code><a class="reference internal" href="_modules/lighthouse/bot.html#Bot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.bot.Bot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Bot is the base unit of work
+This class allows for parser interaction between slack messages
+and underlying commands that they execute.</p>
+<p>Current supported systems:
+Check MK</p>
+<dl class="method">
+<dt id="lighthouse.bot.Bot.valid_slack_bot">
+<code class="sig-name descname">valid_slack_bot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/bot.html#Bot.valid_slack_bot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.bot.Bot.valid_slack_bot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private funciton to check for bot id.
+Dictates if Bot object is valid</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.check_mk_command">
+<span id="lighthouse-check-mk-command-module"></span><h2>lighthouse.check_mk_command module<a class="headerlink" href="#module-lighthouse.check_mk_command" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.check_mk_command.CheckMkCommand">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.check_mk_command.</code><code class="sig-name descname">CheckMkCommand</code><a class="reference internal" href="_modules/lighthouse/check_mk_command.html#CheckMkCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.check_mk_command.CheckMkCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lighthouse.command.Command" title="lighthouse.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">lighthouse.command.Command</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.command">
+<span id="lighthouse-command-module"></span><h2>lighthouse.command module<a class="headerlink" href="#module-lighthouse.command" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.command.Command">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.command.</code><code class="sig-name descname">Command</code><a class="reference internal" href="_modules/lighthouse/command.html#Command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.command.Command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Takes commands and calls correct sub parsers</p>
+<dl class="method">
+<dt id="lighthouse.command.Command.handle_command">
+<code class="sig-name descname">handle_command</code><span class="sig-paren">(</span><em class="sig-param">command='help'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/command.html#Command.handle_command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.command.Command.handle_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point to commands</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.command.Command.safe_call">
+<code class="sig-name descname">safe_call</code><span class="sig-paren">(</span><em class="sig-param">function</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/command.html#Command.safe_call"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.command.Command.safe_call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safe call allows for command bases to ensure that the call 
+they make will not return an error.</p>
+<p>This also allows for handling of csv or json results</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.downtime_commands">
+<span id="lighthouse-downtime-commands-module"></span><h2>lighthouse.downtime_commands module<a class="headerlink" href="#module-lighthouse.downtime_commands" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.downtime_commands.DowntimeCommands">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.downtime_commands.</code><code class="sig-name descname">DowntimeCommands</code><span class="sig-paren">(</span><em class="sig-param">api</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lighthouse.command.Command" title="lighthouse.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">lighthouse.command.Command</span></code></a></p>
+<dl class="method">
+<dt id="lighthouse.downtime_commands.DowntimeCommands.get_alerts">
+<code class="sig-name descname">get_alerts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands.get_alerts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands.get_alerts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.downtime_commands.DowntimeCommands.get_all_downtimes">
+<code class="sig-name descname">get_all_downtimes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands.get_all_downtimes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands.get_all_downtimes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.downtime_commands.DowntimeCommands.get_comments">
+<code class="sig-name descname">get_comments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands.get_comments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands.get_comments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.downtime_commands.DowntimeCommands.get_historical_downtimes">
+<code class="sig-name descname">get_historical_downtimes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands.get_historical_downtimes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands.get_historical_downtimes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.downtime_commands.DowntimeCommands.set_downtime">
+<code class="sig-name descname">set_downtime</code><span class="sig-paren">(</span><em class="sig-param">host_name</em>, <em class="sig-param">message</em>, <em class="sig-param">downTime=120</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/downtime_commands.html#DowntimeCommands.set_downtime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.downtime_commands.DowntimeCommands.set_downtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.event">
+<span id="lighthouse-event-module"></span><h2>lighthouse.event module<a class="headerlink" href="#module-lighthouse.event" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.event.Event">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.event.</code><code class="sig-name descname">Event</code><span class="sig-paren">(</span><em class="sig-param">bot</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/event.html#Event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.event.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Event calls MasterControlProgram as the entry point.
+MCP handles parsing, calling, and sub params. View MCP for further details</p>
+<dl class="method">
+<dt id="lighthouse.event.Event.handle_event">
+<code class="sig-name descname">handle_event</code><span class="sig-paren">(</span><em class="sig-param">user</em>, <em class="sig-param">command</em>, <em class="sig-param">channel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/event.html#Event.handle_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.event.Event.handle_event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.format">
+<span id="lighthouse-format-module"></span><h2>lighthouse.format module<a class="headerlink" href="#module-lighthouse.format" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.format.FormatFor">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.format.</code><code class="sig-name descname">FormatFor</code><a class="reference internal" href="_modules/lighthouse/format.html#FormatFor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.format.FormatFor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides formatting options for many outputs
+Currently Slack</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>code blob wrapped with <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></p></li>
+</ul>
+</div></blockquote>
+<dl class="method">
+<dt id="lighthouse.format.FormatFor.slack_csv_blob">
+<em class="property">classmethod </em><code class="sig-name descname">slack_csv_blob</code><span class="sig-paren">(</span><em class="sig-param">blob</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/format.html#FormatFor.slack_csv_blob"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.format.FormatFor.slack_csv_blob" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.format.FormatFor.slack_json_as_code_blob">
+<em class="property">classmethod </em><code class="sig-name descname">slack_json_as_code_blob</code><span class="sig-paren">(</span><em class="sig-param">blob</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/format.html#FormatFor.slack_json_as_code_blob"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.format.FormatFor.slack_json_as_code_blob" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.get_commands">
+<span id="lighthouse-get-commands-module"></span><h2>lighthouse.get_commands module<a class="headerlink" href="#module-lighthouse.get_commands" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.get_commands.GetCommands">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.get_commands.</code><code class="sig-name descname">GetCommands</code><span class="sig-paren">(</span><em class="sig-param">api</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lighthouse.command.Command" title="lighthouse.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">lighthouse.command.Command</span></code></a></p>
+<dl class="method">
+<dt id="lighthouse.get_commands.GetCommands.alerts">
+<code class="sig-name descname">alerts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands.alerts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands.alerts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.get_commands.GetCommands.all_hosts">
+<code class="sig-name descname">all_hosts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands.all_hosts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands.all_hosts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.get_commands.GetCommands.discover_host_services">
+<code class="sig-name descname">discover_host_services</code><span class="sig-paren">(</span><em class="sig-param">hostname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands.discover_host_services"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands.discover_host_services" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.get_commands.GetCommands.discover_services">
+<code class="sig-name descname">discover_services</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands.discover_services"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands.discover_services" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.get_commands.GetCommands.single_host">
+<code class="sig-name descname">single_host</code><span class="sig-paren">(</span><em class="sig-param">hostname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/get_commands.html#GetCommands.single_host"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.get_commands.GetCommands.single_host" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.host_commands">
+<span id="lighthouse-host-commands-module"></span><h2>lighthouse.host_commands module<a class="headerlink" href="#module-lighthouse.host_commands" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.host_commands.HostCommands">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.host_commands.</code><code class="sig-name descname">HostCommands</code><span class="sig-paren">(</span><em class="sig-param">api</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/host_commands.html#HostCommands"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.host_commands.HostCommands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lighthouse.command.Command" title="lighthouse.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">lighthouse.command.Command</span></code></a></p>
+<dl class="method">
+<dt id="lighthouse.host_commands.HostCommands.add_host">
+<code class="sig-name descname">add_host</code><span class="sig-paren">(</span><em class="sig-param">hostname</em>, <em class="sig-param">folder='/'</em>, <em class="sig-param">ipaddress=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**custom_attrs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/host_commands.html#HostCommands.add_host"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.host_commands.HostCommands.add_host" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.host_commands.HostCommands.edit_host">
+<code class="sig-name descname">edit_host</code><span class="sig-paren">(</span><em class="sig-param">host_name</em>, <em class="sig-param">unset_attributes=None</em>, <em class="sig-param">**custom</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/host_commands.html#HostCommands.edit_host"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.host_commands.HostCommands.edit_host" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse.master_control_program">
+<span id="lighthouse-master-control-program-module"></span><h2>lighthouse.master_control_program module<a class="headerlink" href="#module-lighthouse.master_control_program" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lighthouse.master_control_program.MasterControlProgram">
+<em class="property">class </em><code class="sig-prename descclassname">lighthouse.master_control_program.</code><code class="sig-name descname">MasterControlProgram</code><a class="reference internal" href="_modules/lighthouse/master_control_program.html#MasterControlProgram"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.master_control_program.MasterControlProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lighthouse.command.Command" title="lighthouse.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">lighthouse.command.Command</span></code></a></p>
+<dl class="method">
+<dt id="lighthouse.master_control_program.MasterControlProgram.handle_user_command">
+<code class="sig-name descname">handle_user_command</code><span class="sig-paren">(</span><em class="sig-param">user</em>, <em class="sig-param">command='help'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lighthouse/master_control_program.html#MasterControlProgram.handle_user_command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#lighthouse.master_control_program.MasterControlProgram.handle_user_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>MCP handles user naming.
+Takes other commands and passes them to the correct Command controller
+appends results and returns.</p>
+<p>All other functionality is handled by Command’s <cite>handle_command</cite> method</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lighthouse.master_control_program.MasterControlProgram.user">
+<em class="property">property </em><code class="sig-name descname">user</code><a class="headerlink" href="#lighthouse.master_control_program.MasterControlProgram.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lighthouse">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lighthouse" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Robert R. Meyer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
